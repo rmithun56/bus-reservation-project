@@ -559,14 +559,14 @@ void cancelTicket()
     printf("Enter your PNR number to cancel reservation: ");
     scanf("%s", targetPNR);
 
-    // Loop through all seats on this route to locate the PNR
+    
     for (int i = 0; i < ROWS; i++)
     {
         for (int j = 0; j < COLS; j++)
         {
             if (busRoutes[idx].seats[i][j].isBooked == 1 && strcmp(busRoutes[idx].seats[i][j].pnr, targetPNR) == 0)
             {
-                // Free the seat
+                
                 busRoutes[idx].seats[i][j].isBooked = 0;
                 strcpy(busRoutes[idx].seats[i][j].passengerName, "");
                 busRoutes[idx].seats[i][j].age = 0;
@@ -580,8 +580,8 @@ void cancelTicket()
     printf("\nError: PNR not found on this route.\n");
 }
 
-// --- COMPATIBILITY STUB FOR RECOMMEND SEAT PROTOTYPE ---
+
 void recommendSeat(int routeIndex, int preference)
 {
-    // Handled natively inside bookTicket loop to make console logic blazing fast!
+    
 }
