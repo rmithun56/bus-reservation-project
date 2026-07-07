@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <conio.h> // Required for getch()
+#include <conio.h> 
 
 #define ROWS 10
 #define COLS 4
